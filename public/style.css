@@ -93,6 +93,334 @@ body {
     }
 }
 
+/* ------------------ SECTION 1 KIJK LIVE MEE ------------------ */
+.section-livestream {
+    background-color: var(--broken-white);
+}
+
+.wrapper-livestream{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 1em;;
+    grid-column-gap: 1em;
+}
+
+
+.responsive-livestream{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 1080px){
+    .responsive-livestream{
+        height: 400px;
+    }
+}
+
+.responsive-iframe-livestream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    padding-top: 1em;
+    padding-left: 1em;
+    border: none;
+}
+
+.par-watch-live{
+    grid-column: 2/2;
+    grid-row: 1/1;
+    padding-right: 2em;
+}
+
+h1 {
+    color: var(--purple-blue);
+    font-weight: 800;
+    font-size: var(--large);
+    text-align: left;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .par-watch-live{
+        height: 120px;
+        width: 300px;
+    }
+
+    h1 {
+        font-size: var(--medium);
+    }
+    p {
+        font-size: var(--xs-small);
+    }
+}
+
+/* ------------------ SECTION 2 HOE WERKT HET? ------------------ */
+.section-how-does-it-works {
+    background-color: var(--green);
+    padding-bottom: 4em;
+}
+
+.section-how-does-it-works p {
+    font-size: var(--medium);
+    color: var(--purple-blue);
+    width: 380px;
+    padding-left: 2em;
+}
+
+.section-how-does-it-works img {
+    width: 10em;
+}
+
+h2 {
+    font-size: var(--large);
+    text-align: center;
+    color: var(--white);
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 1080px) {
+    h2 {
+        font-size: var(--medium);
+    }
+}
+
+.carousel-wrapper{
+    height: 400px;
+    position: relative;
+    width: 800px;
+    display: block;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 1080px){
+    .carousel-wrapper {
+        height: 300px;
+        width: 600px;
+    }
+
+    .section-how-does-it-works img {
+        width: 5em;
+    }
+
+    .section-how-does-it-works p {
+        width: 300px;
+        font-size: var(--small);
+    }
+}
+
+.flex-container-car-1, .flex-container-car-2, .flex-container-car-3 {
+    width: 650px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    padding-left: 3em;
+}
+
+@media screen and (max-width: 1080px){
+    .flex-container-car-1, .flex-container-car-2, .flex-container-car-3{
+        width: 450px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        padding-left: 3em;
+    }
+}
+
+.carousel-item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    border-radius: 4px;
+}
+
+.arrow{
+    border: solid var(--purple-blue);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.arrow-prev{
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+    display: none;
+}
+
+.item-1{
+    z-index: 2;
+    opacity: 1;
+    background-color: var(--broken-white);
+}
+
+.item-2{
+    background-color: var(--broken-white);
+
+}
+
+.item-3{
+    background-color: var(--broken-white);]
+}
+
+:target ~ .item-1{
+    opacity: 0;
+}
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+/* ------------------ SECTION 3 VISIE KAART FLIP ------------------ */
+.section-vision{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.section-vision img{
+    width: 13em;
+}
+
+.section-vision p {
+    font-size: var(--medium);
+    color: var(--purple-blue);
+}
+
+.flex-container-vision{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.vision-card-1, .vision-card-2, .vision-card-3 {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 325px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1080px){
+    .flex-container-vision {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-vision img{
+        width: 8em;
+    }
+
+    .section-vision p{
+        font-size: var(--small);
+    }
+}
+
+/* CARD FLIP ANIMATION */
+
+/* The flip card container  */
+.flip-card {
+    background-color: transparent;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--grey);
+    perspective: 1000px;
+}
+
+@media screen and (max-width: 1080px){
+    .flip-card {
+        width: 15em;
+        height: 15em;
+    }
+}
+
+
+/* position the front and back side */
+.flip-card-inner {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip*/
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    /* background-color: #bbb; */
+    color: var(--black);
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: var(--purple-blue);
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    color: var(--white);
+}
+
+@media screen and (max-width: 1080px){
+    .flip-card-back p {
+        font-size: var(--xs-small);
+    }
+
+}
+
 /* ------------------ FOOTER ------------------ */
 .section-footer{
     background-color: var(--green);

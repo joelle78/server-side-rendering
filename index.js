@@ -28,8 +28,16 @@ app.get('/sprint', (request, response) => {
     })
 })
 
-app.get('/over', (request, response) => {
-    response.render('over')
+app.get('/index', (request, response) => {
+    response.render('index')
+})
+
+app.get('/reservation', (request, response) => {
+    response.render('reservation')
+})
+
+app.get('/workshops', (request, response) => {
+    response.render('workshops')
 })
 
 app.get('/contact', (request, response) => {
