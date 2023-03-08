@@ -1,0 +1,88 @@
+:root {
+    /* COLORS */
+    --green: #4E7141; /*158467*/
+    --broken-white: #EEF2E6;
+    --purple-blue: #333568;
+    --orange: #f26f20;
+    --white: #fff;
+    --dark-white: #ddd;
+    --grey: #f1f1f1;
+    --black: #000000;
+}
+
+body {
+    background-color: var(--broken-white);
+    margin: 0;
+    font-family: 'Arial', serif;
+    max-width: 100vw;
+}
+
+/* ------------------ SECTION NAV-BAR ------------------*/
+.topnav {
+    overflow: hidden;
+    background-color: var(--green);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--white);
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.topnav a.active-navbar {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.topnav .icon  {
+    display: none;
+    padding-right: 1.5em;
+}
+
+@media screen and (max-width: 1080px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon  {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon  {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.logo-navbar{
+    width: 5em;
+    float: right;
+    padding-top: 1em;
+    padding-right: 2em;
+}
+
+@media screen and (max-width: 1080px){
+    .logo-navbar{
+        display: none;
+    }
+}
