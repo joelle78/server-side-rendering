@@ -413,6 +413,17 @@ h2 {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .flex-container-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
 /* CARD FLIP ANIMATION */
 
 /* The flip card container  */
