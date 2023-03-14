@@ -156,19 +156,21 @@ h1 {
     padding-right: 25rem;
 }
 
-
-
-
-
-
-
-
 /* ---------------- SECTION 2 HOW IT WORKS---------------- */
 #how-it-works{
     position: relative;
-    width: 100%;
-    height: 1100px;
     background-color: #f6f7f9;
+}
+
+h3 {
+    color: var(--purple-blue);
+    font-size: var(--medium);
+
+}
+
+#how-it-works p {
+    width: 300px;
+
 }
 
 .custom-shape-divider-top-1678751409 {
@@ -192,43 +194,33 @@ h1 {
     fill: #4E7141;
 }
 
-.arrow-2 {
-    position: relative;
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid var(--orange);
-    left: 18%;
-    top: 33%;
-}
-
-h2 {
-    width: 500px;
-    color: var(--purple-blue);
-    font-weight: 800;
-    font-size: var(--large);
-}
-
-#how-it-works p {
-    width: 500px;
-}
-
-
-.flex-wrapper-how {
+.flex-container-how-it-works{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding-top: 20rem;
     justify-content: center;
     align-items: center;
-    padding-top: 18rem;
-    padding-right: 25rem;
+    gap: 15rem;
 }
 
-#how-it-works img {
-    width: 10rem;
+.flex-wrapper-how-1, .flex-wrapper-how-2, .flex-wrapper-how-3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*padding-right: 25rem;*/
 }
 
+.flex-container-how-it-works a {
 
+}
+/* ---------------- SECTION 3 HOW IT WORKS---------------- */
+
+
+#section-4{
+    background-color: var(--grey);
+    height: 200px;
+    margin-top: 12rem;
+}
 
 
 /* ------------------ SECTION 1 KIJK LIVE MEE ------------------ */
@@ -326,180 +318,6 @@ h2 {
 /*    }*/
 /*}*/
 
-
-/* -----------SECTION 2 HOW DOES IT WORKS ----------------- */
-/*.section-how-does-it-works {*/
-/*    background-color: var(--green);*/
-/*    padding-bottom: 4em;*/
-/*}*/
-
-/*.section-how-does-it-works p {*/
-/*    font-size: var(--medium);*/
-/*    color: var(--purple-blue);*/
-/*    width: 380px;*/
-/*    padding-left: 2em;*/
-/*}*/
-
-
-/*.section-how-does-it-works img {*/
-/*    width: 10em;*/
-/*}*/
-
-/*h2 {*/
-/*    position: relative;*/
-/*    font-size: var(--large);*/
-/*    text-align: center;*/
-/*    color: var(--white);*/
-/*    padding-top: 1em;*/
-/*    z-index: 1;*/
-/*}*/
-
-/*@media screen and (max-width: 1080px) {*/
-/*    h2 {*/
-/*        font-size: var(--medium);*/
-/*    }*/
-/*}*/
-
-/*.carousel-wrapper {*/
-/*    height: 400px;*/
-/*    position: relative;*/
-/*    width: 800px;*/
-/*    display: block;*/
-/*    margin: 50px auto;*/
-/*}*/
-
-/*@media screen and (max-width: 1080px) {*/
-/*    .carousel-wrapper {*/
-/*        height: 300px;*/
-/*        width: 600px;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (max-width: 767px) {*/
-/*    .carousel-wrapper {*/
-/*        width: 350px;*/
-/*        height: 300px;*/
-/*    }*/
-/*}*/
-
-/*.section-how-does-it-works img {*/
-/*    width: 5em;*/
-/*}*/
-
-/*.section-how-does-it-works p {*/
-/*    width: 300px;*/
-/*    font-size: var(--small);*/
-/*}*/
-
-/*@media only screen and (max-width: 767px) {*/
-/*    .section-how-does-it-works p {*/
-/*        width: 200px;*/
-/*        font-size: var(--xs-small);*/
-/*        text-align: center;*/
-/*        padding: 0;*/
-/*    }*/
-/*}*/
-
-/*.flex-container-car-1, .flex-container-car-2, .flex-container-car-3 {*/
-/*    width: 650px;*/
-/*    height: 350px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*    gap: 2em;*/
-/*    padding-left: 3em;*/
-/*}*/
-
-/*@media screen and (max-width: 1080px) {*/
-/*    .flex-container-car-1, .flex-container-car-2, .flex-container-car-3 {*/
-/*        width: 450px;*/
-/*        height: 250px;*/
-/*        display: flex;*/
-/*        flex-direction: row;*/
-/*        align-items: center;*/
-/*        gap: 1em;*/
-/*        padding-left: 3em;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (max-width: 767px) {*/
-/*    .flex-container-car-1, .flex-container-car-2, .flex-container-car-3 {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        width: 250px;*/
-/*        padding: 0;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*    }*/
-/*}*/
-
-
-/*.carousel-item {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    padding: 25px 50px;*/
-/*    opacity: 0;*/
-/*    transition: all 0.5s ease-in-out;*/
-/*    border-radius: 4px;*/
-/*}*/
-
-/*.arrow {*/
-/*    border: solid var(--purple-blue);*/
-/*    border-width: 0 3px 3px 0;*/
-/*    display: inline-block;*/
-/*    padding: 5px;*/
-/*}*/
-
-/*.arrow-prev {*/
-/*    left: 30px;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%) rotate(135deg);*/
-/*}*/
-
-/*.arrow-next {*/
-/*    right: 30px;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%) rotate(-45deg);*/
-/*}*/
-
-/*[id^= "item"] {*/
-/*    display: none;*/
-/*}*/
-
-/*.item-1 {*/
-/*    z-index: 2;*/
-/*    opacity: 1;*/
-/*    background-color: var(--broken-white);*/
-/*}*/
-
-/*.item-2 {*/
-/*    background-color: var(--broken-white);*/
-
-/*}*/
-
-/*.item-3 {*/
-/*    background-color: var(--broken-white);*/
-
-/*}*/
-
-
-/*:target ~ .item-1 {*/
-/*    opacity: 0;*/
-/*}*/
-
-/*#item-1:target ~ .item-1 {*/
-/*    opacity: 1;*/
-/*}*/
-
-/*#item-2:target ~ .item-2, #item-3:target ~ .item-3 {*/
-/*    z-index: 3;*/
-/*    opacity: 1;*/
-/*}*/
 
 
  /* -----------SECTION 3 VISIE KAART FLIP----------------- */
