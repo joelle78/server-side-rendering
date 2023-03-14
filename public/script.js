@@ -7,3 +7,11 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+// TEST MET PAGE TRANSITION
+// const btn = document.getElementById('btn');
+// const section = document.getElementById('box');
+//
+// btn.onclick = function (){
+//     section.classList.toggle('anim')
+// }
