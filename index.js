@@ -1,42 +1,33 @@
+// Importeer express uit de node_modules map
 import express from 'express'
 
-// const var, hij veranderd niet
-const stekjesUrl = 'https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes'
-
-// Maak een nieuwe express app
-// Van express een variabel app gemaakt
+// Maak een nieuwe express app aan
 const app = express()
 
-// Stel in hoe we express gebruiken
+// Stel ejs in als template engine en geef de 'views' map door
 app.set('view engine', 'ejs')
 app.set('views', './views')
+
+// Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
 // Maak een route voor de index
-// Informatie krijgen
-// / routing voor de index
+    app.get('/', async function (req, res) {
+    const url = ('https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes?first=3')
+    const data = await fetch (url).then ((response)=> response.json())
+    res.render('index', data)
+})
 
 // app.get('/', (request, response) => {
-
-// app.get('/sprint', (request, response) => {
-//     let slug = request.query.sprintSlug || 'your-tribe'
-//     let sprintUrl = url + '/sprint/' + slug
-//     fetchJson(sprintUrl).then((data) => {
-//         // console.log(data)
-//         response.render('sprint', data)
-//     })
+//     response.render('index')
 // })
 
-app.get('/', (request, response) => {
-    response.render('index')
-})
-
-app.get('/reservation', (request, response) => {
-    // fetchen van data uit API, var veranderen naar data, de response met render functie voor de index de data erbij
-    fetchJson(stekjesUrl).then((data) => {
-        response.render('reservation', data)
-    })
-})
+// app.get('/reservation', (request, response) => {
+//     // fetchen van data uit API, var veranderen naar data, de response met render functie voor de index de data erbij
+//     fetchJson(stekjesUrl).then((data) => {
+//         response.render('reservation', data)
+//     })
+// })
 
 app.get('/workshops', (request, response) => {
     response.render('workshops')
@@ -61,11 +52,14 @@ app.listen(app.get('port'), function () {
  * @param {*} url the api endpoint to address
  * @returns the json response from the api endpoint
  */
+// async function fetchJson(url) {
+//     return await fetch(url)
+//         .then((response) => response.json())
+//         .catch((error) => error)
+// }
 
-async function fetchJson(url) {
-    return await fetch(url)
-        .then((response) => response.json())
-        .catch((error) => error)
-}
+
+
+
 
 

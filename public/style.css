@@ -130,10 +130,10 @@ h1 {
     top: 23%;
 }
 
-#intro{
+#intro {
     width: 100%;
     height: 1100px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0)), url('/assets/steks.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/assets/steks.jpg');
     /*background-color: rgba(255, 255, 255, 0.8);*/
     background-blend-mode: multiply;
     background-size: cover;
@@ -157,7 +157,7 @@ h1 {
 }
 
 /* ---------------- SECTION 2 HOW IT WORKS---------------- */
-#how-it-works{
+#how-it-works {
     position: relative;
     background-color: #f6f7f9;
 }
@@ -194,29 +194,69 @@ h3 {
     fill: #4E7141;
 }
 
-.flex-container-how-it-works{
+.flex-container-how-it-works {
     display: flex;
     flex-direction: row;
-    padding-top: 20rem;
+    padding-top: 15rem;
     justify-content: center;
     align-items: center;
     gap: 15rem;
 }
 
-.flex-wrapper-how-1, .flex-wrapper-how-2, .flex-wrapper-how-3{
+.flex-wrapper-how-1, .flex-wrapper-how-2, .flex-wrapper-how-3 {
     position: relative;
     display: flex;
     flex-direction: column;
     /*padding-right: 25rem;*/
 }
 
-.flex-container-how-it-works a {
-
+#how-it-works a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    font-size: var(--medium);
+    font-weight: bold;
+    color: var(--purple-blue);
+    text-decoration: none;
 }
-/* ---------------- SECTION 3 HOW IT WORKS---------------- */
+
+/* ---------------- SECTION 4 AVAILABLE STEKJES ---------------- */
+h4{
+font-size: var(--xs-small);
+text-align: center;
+}
+
+#available-stekjes {
+    background-color: var(--green);
+    margin-top: 12rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrapper-cards div {
+    outline: solid 3px var(--white);
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    margin-top: 5em;
+    margin-right: 5em;
+}
+
+.flex-wrapper-stekjes img {
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+}
 
 
-#section-4{
+
+
+/* ---------------- SECTION 5 CONTACT ---------------- */
+#contact {
     background-color: var(--grey);
     height: 200px;
     margin-top: 12rem;
@@ -319,14 +359,12 @@ h3 {
 /*}*/
 
 
-
- /* -----------SECTION 3 VISIE KAART FLIP----------------- */
+/* -----------SECTION 3 VISIE KAART FLIP----------------- */
 /*.section-vision {*/
 /*    background-color: var(--green);*/
 
 
 /*}*/
-
 
 
 /*.section-vision img {*/
@@ -503,7 +541,6 @@ flex-container-footer img {
         width: 100%;
     }
 }
-
 
 
 /* ------------------- TEST PAGE TRANSITION ------------------- */

@@ -53,41 +53,60 @@
         </div>
 
         <div class="flex-container-how-it-works">
-        <div class="flex-wrapper-how-1">
-            <h3>Bekijk live de stekjeskast</h3>
-            <p>In deze livestream zie je welke stekjes beschikbaar zijn om te swappen. Wat ook leuk hieraan
-                is dat het groeiproces van de stekjes gevolgd kan worden. Wil je liever op locatie komen om
-                de stekjes te bekijken? Dat kan natuurlijk ook!</p>
+            <div class="flex-wrapper-how-1">
+                <h3>Bekijk de beschikbare stekjes</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+
+
+            <div class="flex-wrapper-how-2">
+                <h3>Wat betekent swappen?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="flex-wrapper-how-3">
+                <h3>Hoe swap ik een stekje?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
 
-
-        <div class="flex-wrapper-how-2">
-            <h3>Wat betekent swappen?</h3>
-            <p>In deze livestream zie je welke stekjes beschikbaar zijn om te swappen. Wat ook leuk hieraan
-                is dat het groeiproces van de stekjes gevolgd kan worden. Wil je liever op locatie komen om
-                de stekjes te bekijken? Dat kan natuurlijk ook!</p>
+        <div>
+            <a href="#available-stekjes">Swap nu je stekje! </a>
         </div>
-
-        <div class="flex-wrapper-how-3">
-            <h3>Waarom zijn stekjes zo cool?</h3>
-            <p>In deze livestream zie je welke stekjes beschikbaar zijn om te swappen. Wat ook leuk hieraan
-                is dat het groeiproces van de stekjes gevolgd kan worden. Wil je liever op locatie komen om
-                de stekjes te bekijken? Dat kan natuurlijk ook!</p>
-        </div>
-
-        </div>
-
 
 
     </section>
 
-    <!--   SECTION 3 -->
+    <!--   SECTION 4 AVAILABLE STEKJES -->
+    <section id="available-stekjes">
+        <% stekjes.forEach(stekje => { %>
+        <div class="flex-wrapper-cards">
+            <div class="flex-wrapper-stekjes">
+                    <img src="<%= stekje.fotos[0].original %>" width="<%= stekje.fotos[0].width %>"
+                         height="<%= stekje.fotos[0].height %>">
+                <h4> <%= stekje.naam %> </h4>
+            </div>
+        </div>
+            <% }) %>
+    </section>
 
 
-    <section id="section-4">
+<!--       SECTION 5 CONTACT-->
+    <section id="contact">
         <p>i'm content</p>
     </section>
-
 
     <!--   SECTION 1 KIJK LIVE MEE -->
     <!--    <section class= "page-section" id="section1">-->
