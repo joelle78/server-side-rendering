@@ -2,6 +2,7 @@
 import express from 'express'
 
 // Maak een nieuwe express app aan
+// Van express een variabel app gemaakt
 const app = express()
 
 // Stel ejs in als template engine en geef de 'views' map door
@@ -11,8 +12,10 @@ app.set('views', './views')
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
+// Informatie krijgen
+// / routing voor de index
 // Maak een route voor de index
-    app.get('/', async function (req, res) {
+app.get('/', async function (req, res) {
     const url = ('https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes?first=3')
     const data = await fetch (url).then ((response)=> response.json())
     res.render('index', data)
@@ -57,6 +60,12 @@ app.listen(app.get('port'), function () {
 //         .then((response) => response.json())
 //         .catch((error) => error)
 // }
+
+
+
+
+
+
 
 
 
