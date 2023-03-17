@@ -90,13 +90,15 @@
     </section>
 
     <!--   SECTION 4 AVAILABLE STEKJES -->
+
     <section id="available-stekjes">
+        <h4>Beschikbare stekjes</h4>
         <% stekjes.forEach(stekje => { %>
         <div class="flex-wrapper-cards">
             <div class="flex-wrapper-stekjes">
                     <img src="<%= stekje.fotos[0].original %>" width="<%= stekje.fotos[0].width %>"
                          height="<%= stekje.fotos[0].height %>">
-                <h4> <%= stekje.naam %> </h4>
+                <h5> <%= stekje.naam %> </h5>
             </div>
         </div>
             <% }) %>

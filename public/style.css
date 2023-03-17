@@ -222,19 +222,26 @@ h3 {
 }
 
 /* ---------------- SECTION 4 AVAILABLE STEKJES ---------------- */
-h4{
-font-size: var(--xs-small);
-text-align: center;
+h4 {
+font-size: var(--small);
+    color: var(--white);
+}
+
+h5 {
+    font-size: var(--xs-small);
+    text-align: center;
+    color: var(--white);
 }
 
 #available-stekjes {
     background-color: var(--green);
-    margin-top: 12rem;
-    padding-bottom: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin-top: 12rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    overflow-x: scroll;
+
 }
 
 .flex-wrapper-cards div {
@@ -251,8 +258,6 @@ text-align: center;
     height: 350px;
     background-size: cover;
 }
-
-
 
 
 /* ---------------- SECTION 5 CONTACT ---------------- */
