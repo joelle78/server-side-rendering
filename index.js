@@ -16,7 +16,7 @@ app.use(express.static('public'))
 // / routing voor de index
 // Maak een route voor de index
 app.get('/', async function (req, res) {
-    const url = ('https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes?first=3')
+    const url = ('https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes')
     const data = await fetch (url).then ((response)=> response.json())
     res.render('index', data)
 })
@@ -55,6 +55,7 @@ app.listen(app.get('port'), function () {
  * @param {*} url the api endpoint to address
  * @returns the json response from the api endpoint
  */
+
 // async function fetchJson(url) {
 //     return await fetch(url)
 //         .then((response) => response.json())
